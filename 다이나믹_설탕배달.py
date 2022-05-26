@@ -1,14 +1,19 @@
-
 from cmath import inf
-import sys
 
-read = sys.stdin.readline
-N = int(read())
 
-d = [inf] * (N+1) #무한대로 초기화!! min 값으로 비교해서 넣기 때문에
-d[3] = d[5] = 1
+N = int(input())
 
-for i in range(6, N):
-    d[i] = min(d[i-3], d[i-5]) + 1 #3과 5를 뺐을 때 구할 수 있는 수 중 더 작은 값
+ 
+d = [10001]*(N+10)
 
-print(d[N] if d[N] < inf  else -1)
+d[3]=d[5]=1
+for i in range(6,N+1):
+    if d[i-5]!=10001:
+        d[i]=min(d[i],d[i-5]+1)
+    if d[i-3]!=10001:
+        d[i]=min(d[i],d[i-3]+1)
+
+if d[N]==10001:
+    print(-1)
+else:
+    print(d[N])
