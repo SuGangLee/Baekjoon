@@ -9,7 +9,7 @@ def dfs(x,y,graph,w,h):
                     nx = x+dx
                     ny= y+dy
                     dfs(nx,ny,graph,w,h)
-                return True      
+                return True  #1이 연결된 부분 탐색완료     
         return False          
     return False
    
