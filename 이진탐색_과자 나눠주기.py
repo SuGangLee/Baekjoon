@@ -19,7 +19,7 @@ while start <= end:
     
     if sum >=  M:   # 중간 값보다 긴 과자가 M개 이상? => 모든 조카 주기 가능?     
         start = mid+1 
-        result = mid #결과 저장, 조카들 줄 과자 길이
+        result = mid #결과 저장, 조카들 줄 과자 길이, mid가 0일 때 고려해야하므로 End가 출력이 될 수 없어
 
     else :
         end = mid -1 
