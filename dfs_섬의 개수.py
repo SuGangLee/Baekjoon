@@ -4,7 +4,7 @@ sys.setrecursionlimit(10**7)
 def dfs(x,y,graph,w,h):
     if 0 <= x < h and 0<= y < w:
         if graph[x][y] == 1:
-                graph[x][y] = 0 
+                graph[x][y] = 0 #방문처리
                 for dx,dy in ([-1,-1],[-1,0],[-1,1],[0, -1], [0, 1], [1, -1], [1, 0], [1, 1]):
                     nx = x+dx
                     ny= y+dy
